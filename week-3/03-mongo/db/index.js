@@ -1,15 +1,19 @@
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-mongoose.connect('your-mongodb-url');
+mongoose.connect('mongodb+srv://aryanjhaop:y8AczO8vm6v2PD90@cluster0.dn3bnq9.mongodb.net/Assignment');
 
 // Define schemas
 const AdminSchema = new mongoose.Schema({
-    // Schema definition here
+    emailId: String,
+    password: String,
+    name: String,
 });
 
 const UserSchema = new mongoose.Schema({
-    // Schema definition here
+    emailId: String,
+    password: String,
+    name: String,
 });
 
 const CourseSchema = new mongoose.Schema({
