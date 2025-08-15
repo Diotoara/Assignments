@@ -13,7 +13,7 @@ router.post('/signup', async(req, res) => {
     await Admin.create({
         emailId : mail,
         password : pass,
-        name : name
+        name : name 
      })
      res.status(200).send({msg : "Admin Created Successfulyy"})
 });
@@ -33,7 +33,7 @@ router.post('/courses', adminMiddleware, async(req, res) => {
 
 router.get('/courses', adminMiddleware, async(req, res) => {
     // Implement fetching all courses logic
-    const courses = await Course.find(); // fetch all courses from DB
+    const courses = await Course.find({}); // fetch all courses from DB
     res.json(courses);
 });
 

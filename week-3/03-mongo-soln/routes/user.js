@@ -18,8 +18,9 @@ router.post('/signup', async(req, res) => {
     res.status(200).send("User created successfully")
 });
 
-router.get('/courses', (req, res) => {
-    // Implement listing all courses logic
+router.get('/courses', async(req, res) => {
+    const courses = await Course.find({}); // fetch all courses from DB
+    res.json(courses);
     
 });
 
